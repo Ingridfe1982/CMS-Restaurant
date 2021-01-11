@@ -1,1 +1,1 @@
-# CMS-Restaurant
+# Repo du projet CMS Restaurant
