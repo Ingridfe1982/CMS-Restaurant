@@ -61,7 +61,6 @@ h2{
     font-weight: regular;
 }
 .big_foot{
-    display: flex;
     flex-direction: column;
 }
 footer{
@@ -70,14 +69,17 @@ footer{
     border-top: 0.1rem solid #F5F5F5;
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 section{
     display: flex;
     justify-content: center;
-    max-width: 80%;
+    flex-direction: column;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
+
 .footer_widget{
     display: flex;
     flex-wrap: wrap;
@@ -85,9 +87,41 @@ section{
     max-width: 100%;
     margin-top: 100px;
 }
+.footer_widget_1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1;
+}
+.footer_widget_2_3{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1;
+}
+.footer_widget_4{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex: 1;
+}
+
 .title_mini{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     height: 60px;
     line-height:35px;
+}
+.title_miniplus{
+    font-size: 32px;
+    font-weight: bold;
+    height: 60px;
+    line-height:35px;
+}
+.widget{
+    flex: 1;
+    margin-top: 15px;
 }

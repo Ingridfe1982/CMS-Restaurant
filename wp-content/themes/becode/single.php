@@ -1,3 +1,3 @@
 <?php get_header(); ?>
-	<h1>SINGLE</h1>
+<section><h1>SINGLE</h1></section>
 <?php get_footer(); ?>
