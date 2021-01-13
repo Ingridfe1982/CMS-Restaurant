@@ -15,13 +15,13 @@ function footer_widgets_init() {
  
 	register_sidebar( array(
    
-	'name' => 'Footer col 1',
-	'id' => 'footer-widget-area1',
-	'before_widget' => '<div class="widget">',
-	'after_widget' => '</div>',
-	'before_title' => '<div class="title_miniplus">',
-	'after_title' => '</div>',
-	) );
+		'name' => 'Footer col 1',
+		'id' => 'footer-widget-area1',
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="title_miniplus">',
+		'after_title' => '</div>',
+		) );
 	
 	register_sidebar( array(
    

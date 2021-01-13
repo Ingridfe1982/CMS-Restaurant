@@ -98,6 +98,7 @@ section{
 .footer_widget_2_3{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     margin-left: 5px;
     margin-right: 5px;
     flex: 1;
@@ -105,6 +106,7 @@ section{
 .footer_widget_4{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     flex: 1;
 }
@@ -125,3 +127,27 @@ section{
     flex: 1;
     margin-top: 15px;
 }
+ /* horaire footer en grid*/
+ .footer_coord {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 1fr 4r 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "tel num-tel"
+      "map map-address"
+      "email email-address";
+  }
+  
+  .tel { grid-area: tel; width: 50px; }
+  
+  .num-tel { grid-area: num-tel;}
+  
+  .map { grid-area: map; width: 50px; margin-top: 15px;}
+  
+  .map-address { grid-area: map-address; margin-top: 15px; margin-bottom: 15px; }
+  
+  .email { grid-area: email; width: 50px; }
+  
+  .email-address { grid-area: email-address; }
+  
