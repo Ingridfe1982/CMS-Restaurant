@@ -12,13 +12,14 @@ Version: 1.0
   }
   
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     background-color: #292929;
     color: #F5F5F5;
     font-size: 16px;
     font-weight: light;
 }
 .site-title{
+   font-family: 'Poppins', sans-serif;
    font-size: 46px;
    font-weight: bold;
    text-decoration: none;
@@ -28,6 +29,7 @@ body {
    color: inherit;
 }
 .menu {
+    font-family: 'Poppins', sans-serif;
     color: inherit;
     font-size: 16px;
     font-weight: medium;
@@ -42,31 +44,37 @@ body {
 }
 /* Title (in the page)  */
 h1{
+    font-family: 'Poppins', sans-serif;
     font-size: 46px;
     font-weight: bold;
 }
 /* Subtitles (in the page) */
 h2{
+    font-family: 'Poppins', sans-serif;
     font-size: 42px;
     font-weight: regular;
 }
 /* Main title at the top : ENJOY HAPPY MEAL */
 .main-title{
+    font-family: 'Poppins', sans-serif;
     font-size: 100px;
     font-weight: SemiBold;
 }
 /* Main subtitle at the top : For happy day*/
 .main_subtitle{
+    font-family: 'Poppins', sans-serif;
     font-size: 60px;
     font-weight: regular;
 }
 .big_foot{
     flex-direction: column;
 }
+
+/* //////////------------FOOTER--------\\\\\\\\\\ */
 footer{
     text-align: center;
     padding-top: 40px;
-    border-top: 0.1rem solid #F5F5F5;
+    border-top: 0.1rem solid #434343;
     width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -79,7 +87,6 @@ section{
     margin-left: auto;
     margin-right: auto;
 }
-
 .footer_widget{
     display: flex;
     flex-wrap: wrap;
@@ -99,8 +106,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 20px;
     flex: 1;
 }
 .footer_widget_4{
@@ -110,14 +116,15 @@ section{
     width: 100%;
     flex: 1;
 }
-
 .title_mini{
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: bold;
     height: 60px;
     line-height:35px;
 }
 .title_miniplus{
+    font-family: 'Poppins', sans-serif;
     font-size: 32px;
     font-weight: bold;
     height: 60px;
@@ -127,7 +134,7 @@ section{
     flex: 1;
     margin-top: 15px;
 }
- /* horaire footer en grid*/
+ /* -------------FOOTER CONTACT WIDGET  <  ---------*/
  .footer_coord {
     display: grid;
     grid-template-columns: 0.3fr 1.7fr;
@@ -150,4 +157,61 @@ section{
   .email { grid-area: email; width: 50px; }
   
   .email-address { grid-area: email-address; }
+  /* -------------  > FOOTER CONTACT WIDGET---------*/
   
+
+  /* -------------- OPEN HOURS WIDGET <  ------------ */
+  .open-hours {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "mon"
+      "tue"
+      "sat"
+      "hol";
+    }
+  .mon {
+      grid-area: mon;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }
+  .tue {
+      grid-area: tue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }  
+  .sat {
+      grid-area: sat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }  
+  .hol {
+      grid-area: hol;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }  
+  .topline1 { 
+        flex: 1;
+        border-top: 2px solid #F5F5F5;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+  .clock {
+     margin-right: 15px;
+     padding-top: 4px;
+    }
+  .hours {
+    text-align: right;
+    }
+
+  /* ----------   > OPEN HOURS WIDGET ------------*/
