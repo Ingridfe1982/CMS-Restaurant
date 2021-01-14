@@ -28,17 +28,20 @@ body {
    text-decoration: none;
    color: inherit;
 }
+.site-title a:hover{
+    text-decoration: none;
+}
 .menu {
     font-family: 'Poppins', sans-serif;
     color: inherit;
     font-size: 16px;
     font-weight: medium;
 }
-.menu a{
+a{
     text-decoration: none;
     color: inherit;
 }
-.menu a:hover{
+a:hover{
     text-decoration: underline;
     color: #F5F5F5;
 }
@@ -133,6 +136,8 @@ section{
 .widget{
     flex: 1;
     margin-top: 15px;
+    max-width: 300px;
+    min-width: 259px;
 }
  /* -------------FOOTER CONTACT WIDGET  <  ---------*/
  .footer_coord {
@@ -158,6 +163,33 @@ section{
   
   .email-address { grid-area: email-address; }
   /* -------------  > FOOTER CONTACT WIDGET---------*/
+  
+
+  /* ---------social buton------- */
+  @media only screen and (max-width: 768px) {
+  .zoom-social-icons-list{
+      text-align: center;
+    }
+   .footer_widget_1{
+    flex-direction: row;
+    }
+   .footer_widget{
+    flex-wrap: wrap;
+    }
+
+} 
+
+@media only screen and (max-width: 360px) {
+    .zoom-social-icons-list{
+        text-align: center;
+      }
+     .footer_widget_1{
+      flex-direction: column;
+      }
+    .footer_widget{
+      flex-direction: column;
+      }
+  }
   
 
   /* -------------- OPEN HOURS WIDGET <  ------------ */
