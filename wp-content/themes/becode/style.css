@@ -13,38 +13,21 @@ Version: 1.0
   
 body {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #292929;
-    color: #F5F5F5;
+    background-color: #F5F5F5;
+    color: #292929;
     font-size: 16px;
     font-weight: light;
 }
-.site-title{
-   font-family: 'Poppins', sans-serif;
-   font-size: 46px;
-   font-weight: bold;
-   text-decoration: none;
-}
-.site-title a{
-   text-decoration: none;
-   color: inherit;
-}
-.site-title a:hover{
-    text-decoration: none;
-}
-.menu {
-    font-family: 'Poppins', sans-serif;
-    color: inherit;
-    font-size: 16px;
-    font-weight: medium;
-}
+
 a{
     text-decoration: none;
     color: inherit;
 }
 a:hover{
     text-decoration: underline;
-    color: #F5F5F5;
-}
+
+    }
+
 /* Title (in the page)  */
 h1{
     font-family: 'Poppins', sans-serif;
@@ -62,18 +45,109 @@ h2{
     font-family: 'Poppins', sans-serif;
     font-size: 100px;
     font-weight: SemiBold;
+    color: #F5F5F5;
 }
 /* Main subtitle at the top : For happy day*/
 .main_subtitle{
     font-family: 'Poppins', sans-serif;
     font-size: 60px;
     font-weight: regular;
+    color: #F5F5F5;
 }
-.big_foot{
+
+.container{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* //////////------------HEADER--------\\\\\\\\\\ */
+.header{
+    color: #F5F5F5;
+    background-color: #292929 ;
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/banner-top.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 1080px;
+}
+.hach_bottom_header{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 73px;
+    transform: rotate(180deg);
+    margin-top: -35px;
+}
+.site-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+    text-decoration: none;
+ }
+ .site-title a{
+    text-decoration: none;
+    color: inherit;
+ }
+ .site-title a:hover{
+     text-decoration: none;
+ }
+ .menu-menu-1-container {
+    display: flex;
+    flex-direction: row; 
+}
+.header_navigation ul li{
+    list-style-type: none; 
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.menu {
+    font-family: 'Poppins', sans-serif;
+    color: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+}
+.menu_svg {
+    height: 1em;
+    /* size icons in the menu with the font-size of the class menu */
+}
+.menu_order{
+    background-color: #F5F5F5;
+    color: #292929;
+    text-transform: uppercase;
+    padding: .8em 1.4em .8em 1.4em;
+}
+
+.item-menu{
+    margin: 10px 30px 10px 10px;
+}
+.flex_empty{
+    flex: 0.2;
+    border-top: 2px solid #F5F5F5;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.top_site{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* //////////------------FOOTER--------\\\\\\\\\\ */
+.big_foot{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    background-color: #292929 ;
+    color: #F5F5F5;
+}
 footer{
     text-align: center;
     padding-top: 40px;
@@ -82,20 +156,12 @@ footer{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-section{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-}
 .footer_widget{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 100%;
-    margin-top: 100px;
+    margin-top: 300px;
 }
 .footer_widget_1{
     display: flex;
@@ -190,7 +256,6 @@ section{
       flex-direction: column;
       }
   }
-  
 
   /* -------------- OPEN HOURS WIDGET <  ------------ */
   .open-hours {
@@ -247,3 +312,5 @@ section{
     }
 
   /* ----------   > OPEN HOURS WIDGET ------------*/
+
+   /* ----------   > END OF FOOTER ------------*/

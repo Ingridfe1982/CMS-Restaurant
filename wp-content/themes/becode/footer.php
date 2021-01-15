@@ -1,7 +1,7 @@
 
         <div>----------------------------------------</br>DEBUT DE FOOTER.PHP </div>
 <section class="big_foot">
-
+<div class="container">
     <!-- beginning of the widget area -->
     <?php if ( is_active_sidebar( 'footer-widget-area1' )|| is_active_sidebar( 'footer-widget-area2' ) || is_active_sidebar( 'footer-widget-area3' ) || is_active_sidebar( 'footer-widget-area4' ) ) : ?>
     <div class="footer_widget">
@@ -25,6 +25,7 @@
     <footer>
         <p>© 2021 All Rights Reserved. Designed by Devdesign Studio Team 42</p>
     </footer>
+</div>
 </section>
         <?php wp_footer(); ?>
 </body>
