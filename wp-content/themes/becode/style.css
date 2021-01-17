@@ -379,10 +379,25 @@ ul.menu_details li:first-child:before {
 
 .menu_price {
     font-weight: bold;
+    font-size: 18px;
 }
 
 .menu_description {
     color: grey;
+}
+
+.menu_selection {
+    border: solid 4px #E1C303;
+}
+
+.selection_title {
+    width: 150px;
+    height: 20px;
+    background-color: #E1C303;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center
 }
 
 /* END OF MENU PAGE */
