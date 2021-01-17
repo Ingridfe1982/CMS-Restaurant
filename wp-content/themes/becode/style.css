@@ -314,3 +314,75 @@ footer{
   /* ----------   > OPEN HOURS WIDGET ------------*/
 
    /* ----------   > END OF FOOTER ------------*/
+
+/* MENU PAGE */
+
+.the_menu {
+    margin: auto;
+    width: 650px;
+}
+
+.menu_title, .menu_name {
+    text-transform: uppercase;
+}
+
+.menu_welcome {
+    width: 650px;
+    text-align: center ;
+    margin-bottom: 40px;
+}
+
+.menu_category {
+    margin: auto;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: black;
+    width: 100px;
+    border-bottom: solid 1px black;
+    padding-bottom: 10px;
+}
+
+.menu_category_details {
+    margin-bottom: 50px;
+}
+
+ul.menu_details {
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none
+}
+
+ul.menu_details li:first-child:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: ". . . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+ }
+
+ ul.menu_details span:first-child {
+    padding-right: 0.5em;
+    background: #F5F5F5;
+ }
+    
+ ul.menu_details span:last-child {
+    float: right;
+    padding-left: 0.5em;
+    background: #F5F5F5;
+ }
+
+.menu_details {
+    margin: 20px;
+}
+
+.menu_price {
+    font-weight: bold;
+}
+
+.menu_description {
+    color: grey;
+}
+
+/* END OF MENU PAGE */
