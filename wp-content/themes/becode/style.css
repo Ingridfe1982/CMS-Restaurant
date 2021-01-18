@@ -71,13 +71,15 @@ h2{
     background-repeat: no-repeat;
     height: 880px;
 }
-.header_img_background {
+.header_img_background img{
     width: 100%;
-    height: auto;
+    height: 880px;
     z-index: -1;
     position: absolute;
     background-color: #292929 ;
 }
+
+
 .hach_bottom_header{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
     background-position: top;
@@ -423,7 +425,8 @@ ul.menu_details li:first-child:before {
     color: white;
     font-weight: bold;
     font-size: 15px;
-    text-align: center
+    text-align: center;
+    padding-top: 8px;
 }
 
 /* END OF MENU PAGE */
