@@ -67,11 +67,16 @@ h2{
 /* //////////------------HEADER--------\\\\\\\\\\ */
 .header{
     color: #F5F5F5;
-    background-color: #292929 ;
-    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/banner-top.jpg);
     background-position: top;
     background-repeat: no-repeat;
-    height: 1080px;
+    height: 880px;
+}
+.header_img_background {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    background-color: #292929 ;
 }
 .hach_bottom_header{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
@@ -139,6 +144,27 @@ h2{
     justify-content: space-between;
     align-items: center;
 }
+@media only screen and (max-width: 768px) {
+ 
+} 
+  
+@media only screen and (max-width: 360px) {
+    .header{
+        max-width: 360px;
+        height: 740px;
+    }
+    .header_img_background {
+        background-color: #292929 ;
+        max-width: 360px;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+    }
+    .header_img_background img{
+        max-height:100%;
+    }
+}
+  
 
 /* //////////------------FOOTER--------\\\\\\\\\\ */
 .big_foot{
