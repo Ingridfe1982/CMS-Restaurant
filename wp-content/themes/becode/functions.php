@@ -4,10 +4,15 @@ add_theme_support('post-thumbnails');
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );
 
-function enregistre_mon_menu() {
-    register_nav_menu( 'menu_principal', __( 'Menu principal' ) );
-}
-add_action( 'init', 'enregistre_mon_menu' );
+function register_my_menus() {
+	register_nav_menus(
+	array(
+	'menu_principal' => __( 'Menu principal' ),
+	'burger_menu' => __( 'Menu Burger' ),
+	)
+	);
+   }
+   add_action( 'init', 'register_my_menus' );
 
 // widget in the footer
 function footer_widgets_init() {
@@ -49,6 +54,15 @@ function footer_widgets_init() {
 		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="title_mini">',
+		'after_title' => '</div>',
+		) );
+	register_sidebar( array(
+
+		'name' => 'Newsletter area',
+		'id' => 'footer-widget-area5',
+		'before_widget' => '<div class="news_widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="news_title">',
 		'after_title' => '</div>',
 		) );
    }

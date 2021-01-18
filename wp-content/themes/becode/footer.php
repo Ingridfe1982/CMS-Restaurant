@@ -1,8 +1,13 @@
-
-        <div>----------------------------------------</br>DEBUT DE FOOTER.PHP </div>
 <section class="big_foot">
 <div class="container">
-    <!-- beginning of the widget area -->
+    <!-- beginning of the NEWSLETTER area -->
+    <div class="news_content">
+        <div class="news_title">Join our<br> newsletter</div>
+        <?php if ( is_active_sidebar( 'footer-widget-area5' ) ) : ?>
+        <div id="footer-widget-area5" class="news_form" role="complementary"><?php dynamic_sidebar( 'footer-widget-area5' ); ?></div>
+        <?php endif; ?>
+    </div>
+    <!-- beginning of the WIDGET FOOTER area -->
     <?php if ( is_active_sidebar( 'footer-widget-area1' )|| is_active_sidebar( 'footer-widget-area2' ) || is_active_sidebar( 'footer-widget-area3' ) || is_active_sidebar( 'footer-widget-area4' ) ) : ?>
     <div class="footer_widget">
         <div id="footer-widget-area1" class="footer_widget_1" role="complementary">
