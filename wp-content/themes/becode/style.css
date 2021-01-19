@@ -601,3 +601,44 @@ ul.menu_details li:first-child:before {
 }
 
 /* END OF MENU PAGE */
+
+/* RECIPES */ 
+
+.recipes {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 300px;
+    margin: auto;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.recipes_details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.recipes_img {
+    width: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.read_more {
+    background-color: #292929;
+    color: white;
+    width: 100px;
+    font-weight: bold;
+    padding: 15px;
+    margin: auto;
+}
+
+.read_more:hover {
+    text-decoration: none;
+    background-color: black;
+}
+
+/* END OF RECIPES */
