@@ -1,0 +1,128 @@
+body {
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/burger-party1.png);
+    background-repeat: repeat;
+    font-family: Helvetica, Arial, sans-serif;
+    color: 292929;
+}
+p{
+    font-size: 0.8em;
+    padding-top: 2em;
+}
+H1{
+
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 2em;
+}
+h4{
+    font-size: 1.5em;
+    padding-top: 1.6em;
+}
+.title {
+    text-align: center;
+    padding-bottom: 3em;
+    padding-top: 3em;
+}
+
+.containThreeResto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.resto {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2em;
+}
+.restoDescriptionRight {
+    background-color: white;
+    text-align: center;
+    width: 40%;
+    margin-left: -14em;
+    margin-top: 3em;
+    /* margin-right: 5em; */
+    margin-bottom: 6em;
+    padding-top: 3em;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    padding-bottom: -6em;
+
+}
+.restoDescriptionLeft1 {
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    /* margin-right: -8em; */
+    margin-top: 3.5em;
+    margin-bottom: 6em;
+    margin-left: 5em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+.restoDescriptionLeft2 {
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    /* margin-right: -10em; */
+    margin-top: 3em;
+    margin-bottom: 6em;
+    margin-left: 5.3em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.imageRight1{
+    /* margin-right: 5em; */
+    margin-left: -4.5em;
+    width: 60%;
+    padding-bottom: 3em;
+    padding-left: 39em;
+    padding-right: 4em;
+    /* padding-right: -2em; */
+}
+.imageRight2{
+    /* margin-right: 5em; */
+    width: 60%;
+    padding-bottom: 3em;
+    padding-left: 34.2em;
+    /* padding-right: -2em; */
+}
+.imageLeft{
+    width: 60%;
+    float: left;
+    margin-left: 5.2em;
+    padding-bottom: 3em;
+}
+#resto1{
+    background-size: cover;
+    width: 572px;
+    height: 572px
+}
+#resto2{
+    background-size: cover;
+    width: 572px;
+    height: 572px
+}
+#resto3{
+    background-size: contain;
+    width: 572px;
+    height: 572px
+}
+.buttonMore {
+    background-color: #323232;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    margin-top: 2.8em;
+    margin-bottom: 2em;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
