@@ -1,0 +1,108 @@
+End of page: plugins.
+Here: codes in the widgets.
+
+---------------------------------------------------------
+---------------------------------------------------------
+
+Newslettter widget
+Mailchimp
+PLUGIN =  MC4WP: Mailchimp for WordPress
+
+To paste in "Form Code" / Settings via MC4WP/Form via dashboard:
+
+<input type="email" name="EMAIL" placeholder="Your Email Address" required />
+<input class="news_btn" type="submit" value="Subscribe" />
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+FOOTER
+Html col 1 :
+(only "Lorem ipsum" without class)
++ PLUGIN = Social Icons Widget & Block by WPZOOM
+
+================================================
+================================================
+Html col 2 :
+
+Title:
+Open hours
+Content:
+<div class="open-hours">
+	<div class="mon">
+	 <div class="clock"><img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/time-clock.svg" alt="clock"></div>
+  <div class="day">Mondays</div>
+<div class="topline1"></div>
+ <div class="hours">Closed</div>
+</div> 
+<div class="tue">
+  <div class="clock"><img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/time-clock.svg" alt="clock"></div>
+  <div class="day">Tue-Fri</div>
+<div class="topline1"></div>
+  <div class="hours">10am - 12am</div>
+</div> 
+<div class="sat">
+  <div class="clock"><img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/time-clock.svg" alt="clock"></div>
+  <div class="day">Sat-Sun</div>
+<div class="topline1"></div>
+  <div class="hours">7am - 1am</div>
+</div> 
+<div class="hol">
+  <div class="clock"><img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/time-clock.svg" alt="clock"></div>
+  <div class="day">Public Holidays</div>
+<div class="topline1"></div>
+  <div class="hours">7am - 1am</div>
+</div>	
+</div> 
+
+================================================
+================================================
+Html col 3 :
+
+Title:
+Contact us
+Content:
+<div class="footer_coord">
+  <div class="tel"><img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/call-10-1.svg" alt="tel"></div>
+  <div class="num-tel">+1 (123) xxx xxx</div>
+  <div class="map"><img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/place-14.svg" alt="map"></div>
+  <div class="map-address">Rue de Mulhouse, 36<br>4020 Liège<br>Belgium</div>
+  <div class="email"><img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/mail-1.svg" alt="email"></div>
+	<div class="email-address"><a href="mailto:lechef@devrestaurant.be">lechef@devrestaurant.be</a></div>
+</div>
+
+================================================
+================================================
+Html col 4 :
+
+Title:
+Instagram
+Content:
+[instagram-feed]
+PLUGIN = Smash Balloon Instagram Feed
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+PLUGINS (19 jan):
+
+ACF Columns
+
+Advanced Custom Fields PRO
+
+Advanced Custom Fields: Image Crop Add-on
+
+MC4WP: Mailchimp for WordPress
+
+SiteOrigin Widgets Bundle
+
+Smash Balloon Instagram Feed
+	
+Social Icons Widget & Block by WPZOOM
+	
+SVG Support

@@ -15,23 +15,35 @@
 <body <?php body_class(); ?>>
 
 <section class="header">
-<div class="container">
-    <div class="top_site">
-        <!-- Site Title ( = blog name de blog info)-->
-        <div class="site-title">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-        </div>
-        <!-- END Site Title -->
-        <!-- <div class="flex_empty">
-        </div> -->
-        <!-- Menu -->
-        <div class="header_navigation">
-            <?php wp_nav_menu( array( 'theme_location' => 'menu_principal' ) ); ?>
+    <div class="header_img_background">
+        <?php 
+        $image = get_field('image_en-tete');
+        if( !empty( $image ) ){ ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+        <?php ;}else{ ?>
+            <div class="noimage"></div>
+            <?php ;}
+            ?>
+    </div>
+    <div class="container">
+        <div class="top_site">
+            <!-- Site Title ( = blog name de blog info)-->
+            <div class="site-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+            </div>
+            <!-- END Site Title -->
+            <!-- <div class="flex_empty">
+            </div> -->
+            <!-- Menu -->
+            <div class="header_navigation">
+                <?php wp_nav_menu( array( 'theme_location' => 'menu_principal' ) ); ?>
+            </div>
+
         </div>
     </div>
-</div>
-
 </section>
 <div class="hach_bottom_header">
-    <!-- background style -->
+    <!-- background style hachage-->
 </div>
+
+

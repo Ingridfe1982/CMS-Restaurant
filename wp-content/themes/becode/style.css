@@ -67,12 +67,27 @@ h2{
 /* //////////------------HEADER--------\\\\\\\\\\ */
 .header{
     color: #F5F5F5;
-    background-color: #292929 ;
-    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/banner-top.jpg);
     background-position: top;
     background-repeat: no-repeat;
-    height: 1080px;
+    height: 880px;
 }
+.header_img_background .noimage{
+    width: 100%;
+    height: 880px;
+    position: absolute;
+    z-index: -1;
+    background-color: #292929 ;
+}
+.header_img_background img{
+    width: 100%;
+    height: 880px;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    filter: invert(0%) grayscale(10%) brightness(50%) contrast(1); 
+}
+
+
 .hach_bottom_header{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
     background-position: top;
@@ -139,6 +154,24 @@ h2{
     justify-content: space-between;
     align-items: center;
 }
+  
+@media only screen and (max-width: 360px) {
+    .header{
+        max-width: 360px;
+        height: 740px;
+    }
+    .header_img_background {
+        background-color: #292929 ;
+        max-width: 360px;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+    }
+    .header_img_background img{
+        max-height:100%;
+    }
+}
+  
 
 /* //////////------------FOOTER--------\\\\\\\\\\ */
 .big_foot{
@@ -147,6 +180,8 @@ h2{
     background-repeat: repeat-x;
     background-color: #292929 ;
     color: #F5F5F5;
+    padding-top: 240px;
+    margin-top: 200px;
 }
 footer{
     text-align: center;
@@ -161,7 +196,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 100%;
-    margin-top: 300px;
+    margin-top: 120px;
 }
 .footer_widget_1{
     display: flex;
@@ -205,6 +240,53 @@ footer{
     max-width: 300px;
     min-width: 259px;
 }
+@media only screen and (max-width: 1060px) {
+    .footer_widget{
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .footer_widget_1{        
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+    .footer_widget_4{       
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    .footer_widget_2_3{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .widget ul{
+        margin-top: 30px;
+    }
+  } 
+  @media only screen and (max-width: 402px) {
+    .footer_widget_4{ 
+        align-items: none;
+    }
+  }
+  
+  @media only screen and (max-width: 360px) {
+        .zoom-social-icons-list{
+          text-align: center;
+        }
+        .footer_widget_1{
+        align-items: center;
+        }
+        .footer_widget_2_3{
+        align-items: center;
+        }
+        .footer_widget_4{
+        align-items: center;
+        }
+        .footer_widget{
+        flex-direction: column;
+        margin-top: 80px;
+        }
+        
+    }
  /* -------------FOOTER CONTACT WIDGET  <  ---------*/
  .footer_coord {
     display: grid;
@@ -255,6 +337,9 @@ footer{
     .footer_widget{
       flex-direction: column;
       }
+      .footer_widget{
+        margin-top: 80px;
+    }
   }
 
   /* -------------- OPEN HOURS WIDGET <  ------------ */
@@ -311,7 +396,121 @@ footer{
     text-align: right;
     }
 
-  /* ----------   > OPEN HOURS WIDGET ------------*/
+    /* ----------   > OPEN HOURS WIDGET ------------*/
+
+    /*----------Newsletter--------*/
+
+.news_content{
+    background-color: #292929 ;
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    margin-top: -400px;
+    padding-top: 40px;
+    z-index: 2;
+    height: 320px;  
+    box-shadow: 2px 28px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+.news_title{
+    text-transform :uppercase;
+    font-size: 48px;
+    margin: 85px 0 85px 85px;
+    font-weight: 900;
+    align-self: flex-end;
+}
+.news_form{
+    margin: 85px;
+    align-self: flex-end;
+    padding-bottom: 18px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.mc4wp-form-fields input{
+    font-size: 16px;
+    border-radius: 3px;    
+    padding: 20px 44px;  
+    border: none;
+}
+.news_btn{
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+
+@media only screen and (max-width: 1260px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .news_title{
+        font-size: 42px;
+        margin: 65px 0px 75px 35px;
+        align-self: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .news_content{
+        height: 260px;
+    }
+    .mc4wp-form-fields{
+        text-align: right;
+    }
+    .mc4wp-form-fields input{
+        margin: 5px;  
+        padding: 15px 44px;  
+    }
+    .news_btn{
+        font-size: 20px;
+        margin: 5px;
+    }
+    .news_form{
+        margin: 0 35px 0px 0;
+        padding: 0;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+  } 
+  
+  @media only screen and (max-width: 675px) {
+        .news_content{
+            padding-top: 40px;
+            height: 380px; 
+            flex-direction: column;
+        }
+        .news_title{
+            margin: 65px 0 35px 15px;
+            align-self: flex-start;
+        }
+        .news_form{
+            margin: 0 0 35px 0px;
+            padding-bottom: 35px;
+        }
+        .mc4wp-form-fields{
+            padding: 0;
+            text-align: center;
+            max-width: 360px;
+        }
+        .mc4wp-form-fields input{
+            padding: 20px 24px;           
+        }
+        .news-widget{
+            text-align: center;
+        }
+    }
 
    /* ----------   > END OF FOOTER ------------*/
 
@@ -397,7 +596,54 @@ ul.menu_details li:first-child:before {
     color: white;
     font-weight: bold;
     font-size: 15px;
-    text-align: center
+    text-align: center;
+    padding-top: 8px;
 }
 
 /* END OF MENU PAGE */
+
+/* RECIPES */ 
+
+.recipes {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 270px;
+    margin: auto;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.recipes_details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.recipes_img {
+    background-color: grey;
+    text-align: center;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+.read_more {
+    background-color: #292929;
+    color: white;
+    width: 100px;
+    font-weight: bold;
+    padding: 15px;
+    margin: auto;
+}
+.boulet {
+    width: 400px;
+    height: 270px;
+}
+.read_more:hover {
+    text-decoration: none;
+    background-color: black;
+}
+
+/* END OF RECIPES */
