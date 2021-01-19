@@ -17,9 +17,12 @@
     <div class="header_img_background">
         <?php 
         $image = get_field('image_en-tete');
-        if( !empty( $image ) ): ?>
+        if( !empty( $image ) ){ ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-        <?php endif; ?>
+        <?php ;}else{ ?>
+            <div class="noimage"></div>
+            <?php ;}
+            ?>
     </div>
     <div class="container">
         <div class="top_site">
