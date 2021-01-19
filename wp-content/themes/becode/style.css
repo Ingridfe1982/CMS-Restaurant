@@ -493,7 +493,7 @@ ul.menu_details li:first-child:before {
     display: flex;
     justify-content: space-between;
     width: 800px;
-    height: 300px;
+    height: 270px;
     margin: auto;
     background-color: #fff;
     margin-bottom: 20px;
@@ -507,7 +507,9 @@ ul.menu_details li:first-child:before {
 }
 
 .recipes_img {
-    width: cover;
+    background-color: grey;
+    text-align: center;
+    width: 400px;
     margin: 0;
     padding: 0;
 }
@@ -520,7 +522,10 @@ ul.menu_details li:first-child:before {
     padding: 15px;
     margin: auto;
 }
-
+.boulet {
+    width: 400px;
+    height: 270px;
+}
 .read_more:hover {
     text-decoration: none;
     background-color: black;
