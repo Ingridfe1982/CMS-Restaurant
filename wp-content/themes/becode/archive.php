@@ -4,14 +4,10 @@
     <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
         <article>
-            
-            <?php $cats = get_categories(); ?>
-
-            <?php echo $cats; ?>
 
             <?php the_post_thumbnail(); ?>
 
-            <?php the_excerpt(); ?>
+            <?php the_content(); ?>
 
             <a href="<?php the_permalink(); ?>">READ A LITTLE MORE</a>
 

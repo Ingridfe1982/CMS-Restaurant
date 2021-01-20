@@ -4,13 +4,14 @@ add_theme_support('post-thumbnails');
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );
 // Définir une autre taille d'images 
-add_image_size( 'recipes', 400, 270, false );
+add_image_size( 'recipes', 400, 300, false );
 
 function register_my_menus() {
 	register_nav_menus(
 	array(
 	'menu_principal' => __( 'Menu principal' ),
 	'burger_menu' => __( 'Menu Burger' ),
+	'categorie_menu' => __(' Menu Catégories'),
 	)
 	);
    }
