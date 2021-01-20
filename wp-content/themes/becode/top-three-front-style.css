@@ -1,0 +1,39 @@
+body{
+    background-color: transparent
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1{
+    padding-top: 1em;
+
+}
+p{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-bottom: 2em;
+}
+
+.top-three {
+    display: flex;
+    flex-direction: row;
+
+}
+.top-three-div{
+    background-color: white;
+    text-align: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-left: 1em;
+    margin-right: 1em;
+    box-shadow: 10px 10px 30px 10px lightgrey;
+}
+
+#quality{
+    padding-top: 3em;
+}
+#delivery{
+    padding-top: 4em;
+}
+#recipes{
+    padding-top: 3em;
+}
+
