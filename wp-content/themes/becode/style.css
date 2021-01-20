@@ -10,7 +10,9 @@ Version: 1.0
     margin: 0;
     padding: 0;
   }
-  
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Helvetica, Arial, sans-serif;
     background-color: #F5F5F5;
@@ -69,25 +71,23 @@ h2{
     color: #F5F5F5;
     background-position: top;
     background-repeat: no-repeat;
-    height: 880px;
+    height: 680px;
 }
 .header_img_background .noimage{
     width: 100%;
-    height: 880px;
+    height: 680px;
     position: absolute;
     z-index: -1;
     background-color: #292929 ;
 }
 .header_img_background img{
     width: 100%;
-    height: 880px;
+    height: 680px;
     position: absolute;
     z-index: -1;
     object-fit: cover;
     filter: invert(0%) grayscale(10%) brightness(50%) contrast(1); 
 }
-
-
 .hach_bottom_header{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
     background-position: top;
@@ -172,7 +172,40 @@ h2{
     }
 }
   
-
+.header_title_big{
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding-top: 35px;
+}
+.header_title_big{
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin-top: -30px;
+}
+.header_title_slogan{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 80px;
+}
+.lien_bonus{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.topline2 { 
+    border-top: 2px solid #F5F5F5;
+    width: 40px;
+    margin-right: 15px;
+}
 /* //////////------------FOOTER--------\\\\\\\\\\ */
 .big_foot{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
