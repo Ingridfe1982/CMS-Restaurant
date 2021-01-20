@@ -699,4 +699,27 @@ ul.menu_details li:first-child:before {
     margin-right: 8px;
 }
 
+.pagination {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.page-numbers {
+    padding: 10px 15px 10px 15px;
+    background-color: white;
+    border: solid 1px #dadada;
+    border-radius: 5px;
+}
+
+.page-numbers:hover {
+    text-decoration: none;
+}
+
+.current {
+    background-color: #F5F5F5;
+}
+
 /* END OF RECIPES */
