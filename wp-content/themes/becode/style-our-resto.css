@@ -1,3 +1,51 @@
+/* Top three services style */
+body{
+    background-color: transparent;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#h1{
+    padding-top: 1em;
+    font-size: 1em;
+
+}
+#p2{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-bottom: 3em;
+}
+
+.top-three {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.8em;
+    margin-right: 4.8em;
+    margin-top: -8em
+
+}
+.top-three-div{
+    background-color: white;
+    text-align: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-left: 1em;
+    margin-right: 1em;
+    box-shadow: 1px 5px 40px 1px rgb(94, 92, 92);
+
+}
+
+#quality{
+    padding-top: 3em;
+}
+#delivery{
+    padding-top: 4em;
+}
+#recipes{
+    padding-top: 3em;
+}
+
+
+
+/* Three resto + description style */
 body {
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/burger-party1.png);
     background-repeat: repeat;
