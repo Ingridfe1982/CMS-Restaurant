@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php
+if ( is_home() ) :
+    get_header( 'blog' );
+elseif ( is_archive() ) :
+    get_header( 'archive' );
+else :
+    get_header();
+endif;
+?>
 <section>
         <!-- <h1>Mes articles</h1> -->
     <div class="container">
