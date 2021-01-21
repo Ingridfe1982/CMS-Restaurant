@@ -1,13 +1,5 @@
 <?php
-if ( is_home() ) :
     get_header( 'blog' );
-elseif ( is_archive() ) :
-    get_header( 'archive' );
-elseif ( is_single() ) :
-    get_header( 'single' );
-else :
-    get_header();
-endif;
 ?>
 <section id="blog_page">
     <div class="container">
@@ -62,4 +54,4 @@ endif;
         </div>
     </div>
 </section>
-<?php get_footer(); ?>
+<?php  get_footer( ); ?>

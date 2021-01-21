@@ -13,7 +13,7 @@ endif;
 <div class="container">
     <div class="d_food">    
         <div class="insta_d_food">
-            [instagram-feed num=4 cols=2]
+            <?php echo do_shortcode('[instagram-feed num=4 cols=2]');?>
         </div>
         <div class="txt_d_food">
             <h2>LET'S DISCOVER FOOD</h2>
