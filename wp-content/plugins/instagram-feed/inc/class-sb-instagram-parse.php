@@ -125,6 +125,20 @@ class SB_Instagram_Parse
 						} elseif ( $carousel_item['media_type'] === 'VIDEO' && empty( $full_size ) ) {
 							if ( isset( $carousel_item['thumbnail_url'] ) ) {
 								$full_size = $carousel_item['thumbnail_url'];
+							} else {
+								$media = trailingslashit( SBI_PLUGIN_URL ) . 'img/thumb-placeholder.png';
+								//attempt to get
+								$permalink = SB_Instagram_Parse::fix_permalink( SB_Instagram_Parse::get_permalink( $carousel_item ) );
+								$single = new SB_Instagram_Single( $permalink );
+								$single->init();
+								$carousel_item_post = $single->get_post();
+
+								if ( isset( $carousel_item_post['thumbnail_url'] ) ) {
+									$media = $carousel_item_post['thumbnail_url'];
+								} elseif ( isset( $carousel_item_post['media_url'] ) && strpos( $carousel_item_post['media_url'], '.mp4' ) === false ) {
+									$media = $carousel_item_post['media_url'];
+								}
+								$full_size = $media;
 							}
 						}
 
@@ -268,14 +282,7 @@ class SB_Instagram_Parse
 		} elseif ( ! empty( $header_data['local_avatar'] ) ) {
 			return $header_data['local_avatar'];
 		} else {
-			$use_cdn = true;
-			if ( SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
-				$use_cdn = false;
-				if ( ! SB_Instagram_GDPR_Integrations::blocking_cdn( $settings ) ) {
-					$use_cdn = true;
-				}
-			}
-			if ( $use_cdn ) {
+			if ( ! SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
 				if ( isset( $header_data['profile_picture'] ) ) {
 					return $header_data['profile_picture'];
 				} elseif ( isset( $header_data['profile_picture_url'] ) ) {

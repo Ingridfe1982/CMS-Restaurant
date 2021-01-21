@@ -224,6 +224,15 @@ h2{
     padding-top: 240px;
     margin-top: 200px;
 }
+.big_foot_grey{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    background-color: #292929 ;
+    color: #F5F5F5;
+    padding-top: 240px;
+    margin-top: 200px;
+}
 footer{
     text-align: center;
     padding-top: 40px;
@@ -444,6 +453,18 @@ footer{
 .news_content{
     background-color: #292929 ;
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    margin-top: -400px;
+    padding-top: 40px;
+    z-index: 2;
+    height: 320px;  
+    box-shadow: 2px 28px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+.news_content_grey{
+    background-color: #292929 ;
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
     background-position: top;
     background-repeat: repeat-x;
     margin-top: -400px;

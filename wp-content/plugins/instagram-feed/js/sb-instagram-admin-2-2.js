@@ -1141,7 +1141,6 @@ jQuery(document).ready(function($) {
         sbiCheckGdprSetting( jQuery(this).val() );
     });
     function sbiCheckGdprSetting(option) {
-        console.log('heretere')
         if( option == 'yes' ){
             jQuery('.sbi_gdpr_yes').show();
             jQuery('.sbi_gdpr_no, .sbi_gdpr_auto').hide();
