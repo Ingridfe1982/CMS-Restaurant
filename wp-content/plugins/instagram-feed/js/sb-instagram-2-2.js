@@ -289,8 +289,6 @@ if(!sbi_js_exists) {
                 $(this.el).find('.sbi_item').each(function() {
                     feed.lazyLoadCheck($(this));
                 });
-
-
             },
             initLayout: function() {
 
@@ -677,7 +675,7 @@ if(!sbi_js_exists) {
                         $(this).addClass('sbi_img_error');
                         var sourceFromAPI = ($(this).attr('src').indexOf('media/?size=') > -1 || $(this).attr('src').indexOf('cdninstagram') > -1 || $(this).attr('src').indexOf('fbcdn') > -1)
 
-                        if (!sourceFromAPI) {
+                        if (!sourceFromAPI && feed.settings.consentGiven) {
 
                             if ($(this).closest('.sbi_photo').attr('data-img-src-set') !== 'undefined') {
                                 var srcSet = JSON.parse($(this).closest('.sbi_photo').attr('data-img-src-set').replace(/\\\//g, '/'));
@@ -946,6 +944,8 @@ if(!sbi_js_exists) {
                     this.settings.consentGiven = sbiCmplzGetCookie('complianz_consent_status') === 'allow';
                 } else if (typeof window.Cookiebot !== "undefined") { // Cookiebot by Cybot A/S
                     this.settings.consentGiven = Cookiebot.consented;
+                } else if (typeof window.BorlabsCookie !== 'undefined') { // Borlabs Cookie by Borlabs
+                    this.settings.consentGiven = window.BorlabsCookie.checkCookieConsent('instagram');
                 }
 
                 var evt = jQuery.Event('sbicheckconsent');
@@ -1064,6 +1064,14 @@ if(!sbi_js_exists) {
 
         // Complianz by Really Simple Plugins
         $(document).on('cmplzRevoke', function (event) {
+            $.each(window.sbi.feeds,function(index){
+                window.sbi.feeds[ index ].settings.consentGiven = false;
+                window.sbi.feeds[ index ].afterConsentToggled();
+            });
+        });
+
+        // Borlabs Cookie by Borlabs
+        $(document).on('borlabs-cookie-consent-saved', function (event) {
             $.each(window.sbi.feeds,function(index){
                 window.sbi.feeds[ index ].settings.consentGiven = false;
                 window.sbi.feeds[ index ].afterConsentToggled();

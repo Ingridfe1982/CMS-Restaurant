@@ -3,7 +3,7 @@ Contributors: smashballoon, craig-at-smash-balloon
 Tags: Instagram, Instagram feed, Instagram photos, Instagram widget, Instagram gallery
 Requires at least: 3.4
 Tested up to: 5.6
-Stable tag: 2.6.2
+Stable tag: 2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -332,6 +332,14 @@ We understand that sometimes you need help, have issues or just have questions. 
 * Plus more customization options added all the time!
 
 == Changelog ==
+= 2.7 =
+* Tweak: Several performance improvements have been made in this update such as improved caching and fewer database queries when displaying feeds.
+* Tweak: The limit of resized, local images created and stored were raised for the overall number and the rate at which they could be created.
+* Tweak: Improved how feed errors are handled and reported. API request delays will only apply to feeds encountering errors and will not affect other feeds.
+* Tweak: Added a hook for disabling image resizing dynamically with PHP.
+* Fix: PHP Warning "required parameter follows optional parameter" that would display when using PHP 8+.
+* Fix: The GDPR feature would sometimes report errors when the feature was working fine.
+
 = 2.6.2 =
 * Tweak: If the image resizing feature isn't able to work successfully due to an issue, then the GDPR setting will be disabled unless manually enabled to prevent blank images in the feed.
 * Fix: In some situations the GDPR setting was incorrectly reporting an error with image resizing.
