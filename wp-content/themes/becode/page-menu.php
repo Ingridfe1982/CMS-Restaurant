@@ -1,10 +1,9 @@
 <?php get_header(); ?>
-<section>
+<section id="our_menu">
     <div class="the_menu">
     <?php while( have_posts() ) : the_post(); ?>
         <article class="menu_welcome">
-            <?php the_content(); ?>
-            <h1 class="menu_title">THE <?php the_title(); ?></h1>  
+            <h1 class="menu_title">THE MENU</h1>  
         </article>
     <?php endwhile; ?>
     <p class="menu_category">STARTERS</p>
@@ -126,4 +125,10 @@
         </div>
     </div>
 </section>
+
+<?php while( have_posts() ) : the_post(); ?>
+            <?php the_content(); ?> 
+       
+<?php endwhile; ?>
+
 <?php get_footer(); ?>

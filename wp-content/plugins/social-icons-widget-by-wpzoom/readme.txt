@@ -133,6 +133,11 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 4.1.0 =
+* New options on the settings page to disable individual icon sets
+* Plugin optimization: enabled font preloading to improve the PageSpeed score. This option can be disabled from the Settings page.
+* New icons: Guilded, ko-fi, MeWe, Mail.ru, iHeartRadio, PlayerFM, Stitcher (new icon), Ravelry, NewGrounds
+
 = 4.0.5 =
 * New icons: Mailchimp, Parler, Nextdoor (updated icon)
 

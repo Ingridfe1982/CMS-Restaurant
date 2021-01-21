@@ -49,6 +49,6 @@
         <!-- END page title -->
     </div>
 </section>
-<div class="hach_bottom_header">
+<div class="hach_bottom_header_blog">
     <!-- background style hachage-->
 </div>

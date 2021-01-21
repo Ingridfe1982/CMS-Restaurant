@@ -16,6 +16,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget
     protected $icons = null;
 
 
+	/**
+     * Settings from database.
+	 *
+     * @var array
+	 */
+    protected $settings = [];
 
     /**
      * @var array protocols that are allowed in esc_url validation function.
@@ -50,11 +56,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             )
         );
 
-	    if ( is_active_widget( false, false, 'zoom-social-icons-widget' ) ) {
+	    add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 
-		    add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
-
-	    }
 
         $this->icons = include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'icons-data.php';
 	    $removed_keys = ['fab', 'fas', 'far'];
@@ -83,7 +86,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
     }
 
-    function admin_js_templates_for_beaver()
+	function admin_js_templates_for_beaver()
     {
         if ((class_exists('FLBuilderModel') && FLBuilderModel::is_builder_active())) {
             $this->admin_js_templates();
@@ -207,7 +210,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 	public function check_current_screen() {
 		$current_screen = get_current_screen();
 
-		if ( ! empty( $current_screen->id ) && ( $current_screen->id === 'widgets' || $current_screen->id === 'customize' ) ) {
+		if ( ! empty( $current_screen->id ) &&
+		     ( $current_screen->id === 'widgets' ||
+		       $current_screen->id === 'appearance_page_gutenberg-widgets' ||
+		       $current_screen->id === 'customize' ) ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 			add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
 		}
@@ -234,7 +240,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                 <button type="button" class="media-modal-close" @click="$emit('close')"><span
                             class="media-modal-icon"><span class="screen-reader-text">Close media panel</span></span>
                 </button>
-                <div class="media-modal-content">
+                <div class="media-modal-content" ref="mediaModal">
 
                     <div class="zoom-social-modal-title">
                         <slot name="header">
@@ -346,6 +352,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             array(),
             filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css')
         );
+
+	    wp_enqueue_style(
+		    'wpzoom-social-icons-styles',
+		    WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-social-icons-styles.css',
+		    array(),
+		    filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-social-icons-styles.css')
+	    );
 
         wp_enqueue_style(
             'wpzoom-social-icons-admin',
@@ -912,6 +925,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                     <li class="zoom-social-icons__field">
 
                         <modal
+                                ref="modals"
                                 @input='onInputModal'
                                 @keyup.esc.stop="closeModal(key)"
                                 @close='closeModal(key)'
@@ -933,7 +947,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                               :class="[ field.icon_kit, field.icon_kit+'-'+field.icon, icon_canvas_style]"
                               @mouseover='mouseoverIcon(key, $event)'
                               @mouseleave='mouseleaveIcon(key, $event)'
-                              @click="clickonIconHandler(key)"></span>
+                              @click.stop="clickonIconHandler(key)"></span>
                         <div class="zoom-social-icons__cw">
                             <div class="zoom-social-icons__inputs" ref="inputFields">
 
@@ -1067,8 +1081,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                         'label' => 'Facebook',
                         'icon' => 'facebook',
                         'icon_kit' => 'socicon',
-                        'color_picker' => '#3b5998',
-                        'color_picker_hover' => '#3b5998',
+                        'color_picker' => '#1877F2',
+                        'color_picker_hover' => '#1877F2',
                         'aria_label' => '',
                         // 'is_rel_me'          => 'false'
                     ),
@@ -1105,18 +1119,23 @@ class Zoom_Social_Icons_Widget extends WP_Widget
      *
      * @return array
      */
-    public function normalize_data_array($value)
-    {
-        $collector = array();
-        foreach ($value as $val_key => $val) {
-            if (is_array($val)) {
-                $val = $this->normalize_data_array($val);
-            }
-            $collector[str_replace('-', '_', $val_key)] = $val;
-        }
+	public function normalize_data_array( $value ) {
 
-        return $collector;
-    }
+		$collector = [];
+
+		if ( empty( $value ) ) {
+			return $collector;
+		}
+
+		foreach ( $value as $val_key => $val ) {
+			if ( is_array( $val ) ) {
+				$val = $this->normalize_data_array( $val );
+			}
+			$collector[ str_replace( '-', '_', $val_key ) ] = $val;
+		}
+
+		return $collector;
+	}
 
     /**
      * It is a function for backward compatibility that normalize data values between old and new version
@@ -1440,6 +1459,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 		);
 
 		wp_register_style(
+			'wpzoom-social-icons-styles',
+			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-social-icons-styles.css',
+			array(),
+			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-social-icons-styles.css')
+		);
+
+		wp_register_style(
 			'wpzoom-social-icons-genericons',
 			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
 			array(),
@@ -1474,35 +1500,59 @@ class Zoom_Social_Icons_Widget extends WP_Widget
      */
     public function enqueue_scripts()
     {
-        wp_enqueue_style(
-            'wpzoom-social-icons-socicon',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
-            array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css')
-        );
 
-        wp_enqueue_style(
-            'wpzoom-social-icons-genericons',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
-            array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/genericons.css')
-        );
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-socicons') ) ) {
+		    wp_enqueue_style(
+			    'wpzoom-social-icons-socicon',
+			    WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
+			    array(),
+			    filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css' )
+		    );
+	    }
 
-        wp_enqueue_style(
-            'wpzoom-social-icons-academicons',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/academicons.min.css',
-            array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/academicons.min.css')
-        );
 
-        wp_enqueue_style(
-            'wpzoom-social-icons-font-awesome-3',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/font-awesome-3.min.css',
-            array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/font-awesome-3.min.css')
-        );
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-genericons') ) ) {
 
-        wp_enqueue_style('dashicons');
+		    wp_enqueue_style(
+			    'wpzoom-social-icons-genericons',
+			    WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
+			    array(),
+			    filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/genericons.css' )
+		    );
+	    }
+
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-academicons') ) ) {
+
+		    wp_enqueue_style(
+			    'wpzoom-social-icons-academicons',
+			    WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/academicons.min.css',
+			    array(),
+			    filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/academicons.min.css' )
+		    );
+	    }
+
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-font-awesome-3') ) ) {
+
+		    wp_enqueue_style(
+			    'wpzoom-social-icons-font-awesome-3',
+			    WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/font-awesome-3.min.css',
+			    array(),
+			    filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/font-awesome-3.min.css' )
+		    );
+	    }
+
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-dashicons') ) ) {
+
+		    wp_enqueue_style( 'dashicons' );
+
+	    }
+
+	    wp_enqueue_style(
+		    'wpzoom-social-icons-styles',
+		    WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-social-icons-styles.css',
+		    array(),
+		    filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-social-icons-styles.css')
+	    );
 
         wp_enqueue_script(
             'zoom-social-icons-widget-frontend',

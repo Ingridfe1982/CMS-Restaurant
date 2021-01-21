@@ -15,7 +15,7 @@ html {
 }
 body {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
     color: #292929;
     font-size: 16px;
     font-weight: light;
@@ -89,6 +89,14 @@ h2{
     filter: invert(0%) grayscale(10%) brightness(50%) contrast(1); 
 }
 .hach_bottom_header{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 73px;
+    transform: rotate(180deg);
+    margin-top: -35px;
+}
+.hach_bottom_header_blog{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
     background-position: top;
     background-repeat: repeat-x;
@@ -208,7 +216,7 @@ h2{
 }
 /* //////////------------FOOTER--------\\\\\\\\\\ */
 .big_foot{
-    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
     background-position: top;
     background-repeat: repeat-x;
     background-color: #292929 ;
@@ -435,7 +443,7 @@ footer{
 
 .news_content{
     background-color: #292929 ;
-    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
     background-position: top;
     background-repeat: repeat-x;
     margin-top: -400px;
@@ -637,6 +645,10 @@ ul.menu_details li:first-child:before {
 
 /* RECIPES */ 
 
+#blog_page{
+    background-color: #F5F5F5;
+    padding-bottom: 80px;
+}
 .cat_navigation ul li {
     list-style-type: none; 
     display: flex;
@@ -756,3 +768,51 @@ ul.menu_details li:first-child:before {
 }
 
 /* END OF RECIPES */
+
+/* ---------- Discover food ------------------ */ 
+.insta_d_food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.d_food{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.insta_d_food{
+    flex: 1;
+    width: 50%;
+    margin-right: 30px;
+}
+.txt_d_food{
+    flex: 1;
+    text-align: center;
+    width: 50%;
+    padding: 20px 30px 0 60px;
+}
+.text_d_food {
+    line-height: 3em;
+    margin-bottom: 65px;
+}
+.txt_d_food h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.txt_d_food h1 {
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+#discorver_food {
+    margin-top: 40px;
+}
+.hach_bottom_home{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 73px;
+    transform: rotate(180deg);
+    margin-top: -15px;
+}

@@ -97,6 +97,8 @@
                         'feedburner.google.com': 'rss',
                         'ok.ru':'odnoklassniki',
                         't.me':'telegram',
+                        'm.me':'messenger',
+                        'mail.ru':'mailru',
                         'wa.me':'whatsapp',
                         'news.google.com':'google-news',
                         'itunes.apple.com/us/podcast':'apple-podcasts',
@@ -204,6 +206,11 @@
                     this.fields[key].show_modal = true;
                     $('body').addClass('modal-open');
 
+                    var $widgetkWrapper = $(this.$el).closest('.block-editor-block-list__block');
+
+                    if ($widgetkWrapper.length) {
+                        $widgetkWrapper.attr('data-is-social-icons-widget', true);
+                    }
                 },
                 clickOnDeleteIconHandler: function (key) {
 
@@ -217,6 +224,13 @@
                 closeModal: function (key) {
                     this.fields[key].show_modal = false;
                     $('body').removeClass('modal-open');
+
+                    var $widgetkWrapper = $(this.$el).closest('.block-editor-block-list__block');
+
+                    if ($widgetkWrapper.length) {
+                        $widgetkWrapper.removeAttr('data-is-social-icons-widget');
+
+                    }
                 },
                 insertField: function (e) {
                     this.fields.push(_.clone(defaultField));
@@ -351,7 +365,6 @@
                 window.addEventListener('keyup', function (e) {
                     that.$emit('keyup', e);
                 });
-
             },
             mounted: function () {
                 this.$nextTick(function () {
@@ -486,8 +499,4 @@
             }
         });
     });
-
-
-
-
 })(jQuery, _, zoom_social_widget_data);
