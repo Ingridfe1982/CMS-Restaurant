@@ -10,10 +10,12 @@ Version: 1.0
     margin: 0;
     padding: 0;
   }
-  
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
     color: #292929;
     font-size: 16px;
     font-weight: light;
@@ -69,26 +71,32 @@ h2{
     color: #F5F5F5;
     background-position: top;
     background-repeat: no-repeat;
-    height: 880px;
+    height: 680px;
 }
 .header_img_background .noimage{
     width: 100%;
-    height: 880px;
+    height: 680px;
     position: absolute;
     z-index: -1;
     background-color: #292929 ;
 }
 .header_img_background img{
     width: 100%;
-    height: 880px;
+    height: 680px;
     position: absolute;
     z-index: -1;
     object-fit: cover;
     filter: invert(0%) grayscale(10%) brightness(50%) contrast(1); 
 }
-
-
 .hach_bottom_header{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 73px;
+    transform: rotate(180deg);
+    margin-top: -35px;
+}
+.hach_bottom_header_blog{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
     background-position: top;
     background-repeat: repeat-x;
@@ -172,10 +180,43 @@ h2{
     }
 }
   
-
+.header_title_big{
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding-top: 35px;
+}
+.header_title_big{
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin-top: -30px;
+}
+.header_title_slogan{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 80px;
+}
+.lien_bonus{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.topline2 { 
+    border-top: 2px solid #F5F5F5;
+    width: 40px;
+    margin-right: 15px;
+}
 /* //////////------------FOOTER--------\\\\\\\\\\ */
 .big_foot{
-    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
     background-position: top;
     background-repeat: repeat-x;
     background-color: #292929 ;
@@ -402,7 +443,7 @@ footer{
 
 .news_content{
     background-color: #292929 ;
-    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
     background-position: top;
     background-repeat: repeat-x;
     margin-top: -400px;
@@ -604,27 +645,70 @@ ul.menu_details li:first-child:before {
 
 /* RECIPES */ 
 
-.recipes {
+#blog_page{
+    background-color: #F5F5F5;
+    padding-bottom: 80px;
+}
+.cat_navigation ul li {
+    list-style-type: none; 
     display: flex;
-    justify-content: space-between;
-    width: 800px;
-    height: 270px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 14px;
+}
+
+.cat_navigation {
+    width: 900px;
+    margin: auto;
+}
+
+.recipes {
+    width: 900px;
+    height: 300px;
     margin: auto;
     background-color: #fff;
+    margin-top: 40px;
     margin-bottom: 20px;
+}
+
+.recipes:nth-child(even) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.recipes:nth-child(odd) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 
 .recipes_details {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 20px;
     text-align: center;
+}
+
+.post-categories {
+    list-style: none;
+    font-weight: bold;
+}
+
+.post_date {
+    color: grey;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 .recipes_img {
     background-color: grey;
     text-align: center;
-    width: 400px;
+    width: 500px;
     margin: 0;
     padding: 0;
 }
@@ -634,16 +718,101 @@ ul.menu_details li:first-child:before {
     color: white;
     width: 100px;
     font-weight: bold;
-    padding: 15px;
+    padding: 10px 25px 10px 25px;
     margin: auto;
 }
-.boulet {
-    width: 400px;
-    height: 270px;
+.dish {
+    width: 500px;
+    height: 300px;
 }
 .read_more:hover {
     text-decoration: none;
     background-color: black;
 }
 
+.recipe_ingre {
+    list-style: circle;
+}
+
+.recipe_cat {
+    display: flex;
+    justify-content: center;
+}
+
+.img_cat {
+    width: 13px;
+    margin-right: 8px;
+}
+
+.pagination {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.page-numbers {
+    padding: 10px 15px 10px 15px;
+    background-color: white;
+    border: solid 1px #dadada;
+    border-radius: 5px;
+}
+
+.page-numbers:hover {
+    text-decoration: none;
+}
+
+.current {
+    background-color: #F5F5F5;
+}
+
 /* END OF RECIPES */
+
+/* ---------- Discover food ------------------ */ 
+.insta_d_food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.d_food{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.insta_d_food{
+    flex: 1;
+    width: 50%;
+    margin-right: 30px;
+}
+.txt_d_food{
+    flex: 1;
+    text-align: center;
+    width: 50%;
+    padding: 20px 30px 0 60px;
+}
+.text_d_food {
+    line-height: 3em;
+    margin-bottom: 65px;
+}
+.txt_d_food h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.txt_d_food h1 {
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+#discorver_food {
+    margin-top: 40px;
+}
+.hach_bottom_home{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 73px;
+    transform: rotate(180deg);
+    margin-top: -15px;
+}

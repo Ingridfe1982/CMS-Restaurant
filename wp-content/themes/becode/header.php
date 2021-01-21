@@ -14,6 +14,8 @@
 
 <body <?php body_class(); ?>>
 
+
+
 <section class="header">
     <div class="header_img_background">
         <?php 
@@ -32,16 +34,25 @@
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </div>
             <!-- END Site Title -->
-            <!-- <div class="flex_empty">
-            </div> -->
+
             <!-- Menu -->
             <div class="header_navigation">
                 <?php wp_nav_menu( array( 'theme_location' => 'menu_principal' ) ); ?>
             </div>
-
         </div>
+        
+        <!-- page title -->
+        <div class="header_title">
+            <div class="header_title_slogan"><?php the_field('header_title_slogan') ?></div>
+            <div class="header_title_big"><?php the_field('header_title_big_1') ?><br><?php the_field('header_title_big_2') ?></div>
+        </div>
+        <div class="lien_bonus">
+            <div class="topline2"></div>
+            <a href="<?php the_field('lien_bonus', 18) ?>"><?php the_field('texte_du_lien_bonus') ?></a></div>
+        <!-- END page title -->
     </div>
 </section>
+
 <div class="hach_bottom_header">
     <!-- background style hachage-->
 </div>

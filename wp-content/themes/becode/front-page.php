@@ -1,4 +1,14 @@
-<?php get_header(); ?>
+<?php
+if ( is_home() ) :
+    get_header( 'blog' );
+elseif ( is_archive() ) :
+    get_header( 'archive' );
+elseif ( is_single() ) :
+    get_header( 'single' );
+else :
+    get_header();
+endif;
+?>
 <section>
     <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <?php the_post_thumbnail('medium'); ?>
