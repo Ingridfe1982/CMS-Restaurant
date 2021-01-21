@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style-our-resto.css">
 </head>
 <body>
+<div class="containerOurResto">
+<img id="rognureBlanche" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png" alt="" width="100%" >
 <section class="container">
     <div class="title">
         <h2>Discover our franchise</h2>
@@ -54,9 +56,9 @@
             <div class="imageRight2">
                 <img id="resto3" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/resto3.jpg" alt="resto3" width="763px" height="572px">
             </div>
-    </div>
-
+        </div>
     </div>
 </section>
+</div>
 </body>
 </html>
