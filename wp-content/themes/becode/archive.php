@@ -3,6 +3,8 @@ if ( is_home() ) :
     get_header( 'blog' );
 elseif ( is_archive() ) :
     get_header( 'archive' );
+elseif ( is_single() ) :
+    get_header( 'single' );
 else :
     get_header();
 endif;

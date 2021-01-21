@@ -15,14 +15,7 @@
 
 <section class="header">
     <div class="header_img_background">
-        <?php 
-        $image = get_field('image_en-tete1', 18);
-        if( !empty( $image ) ){ ?>
-            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-        <?php ;}else{ ?>
-            <div class="noimage"></div>
-            <?php ;}
-            ?>
+        <div class="noimage"></div>
     </div>
     <div class="container">
         <div class="top_site">
@@ -38,15 +31,6 @@
             </div>
         </div>
         
-        <!-- page title -->
-        <div class="header_title">
-            <div class="header_title_slogan"><?php the_field('header_title_slogan', 18) ?></div>
-            <div class="header_title_big"><?php the_field('header_title_big_1', 18) ?><br><?php the_field('header_title_big_2', 18) ?></div>
-        </div>
-        <div class="lien_bonus">
-            <div class="topline2"></div>
-            <a href="<?php the_field('lien_bonus', 18) ?>"><?php the_field('texte_du_lien_bonus', 18) ?></a></div>
-        <!-- END page title -->
     </div>
 </section>
 <div class="hach_bottom_header">
