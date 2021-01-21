@@ -1,0 +1,249 @@
+/*
+Theme Name: Becode
+Authors: Camélia - Ingrid - Olivier -- TEAM 42
+Author URI: https://github.com/Ingridfe1982/CMS-Restaurant
+Description: Theme Becode -- CMS-Restaurant
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #292929;
+    color: #F5F5F5;
+    font-size: 16px;
+    font-weight: light;
+}
+.site-title{
+   font-family: 'Poppins', sans-serif;
+   font-size: 46px;
+   font-weight: bold;
+   text-decoration: none;
+}
+.site-title a{
+   text-decoration: none;
+   color: inherit;
+}
+.site-title a:hover{
+    text-decoration: none;
+}
+.menu {
+    font-family: 'Poppins', sans-serif;
+    color: inherit;
+    font-size: 16px;
+    font-weight: medium;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+    color: #F5F5F5;
+}
+/* Title (in the page)  */
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+}
+/* Subtitles (in the page) */
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: regular;
+}
+/* Main title at the top : ENJOY HAPPY MEAL */
+.main-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: SemiBold;
+}
+/* Main subtitle at the top : For happy day*/
+.main_subtitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: regular;
+}
+.big_foot{
+    flex-direction: column;
+}
+
+/* //////////------------FOOTER--------\\\\\\\\\\ */
+footer{
+    text-align: center;
+    padding-top: 40px;
+    border-top: 0.1rem solid #434343;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer_widget{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-top: 100px;
+}
+.footer_widget_1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1;
+}
+.footer_widget_2_3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 20px;
+    flex: 1;
+}
+.footer_widget_4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+.title_mini{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    height: 60px;
+    line-height:35px;
+}
+.title_miniplus{
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    height: 60px;
+    line-height:35px;
+}
+.widget{
+    flex: 1;
+    margin-top: 15px;
+    max-width: 300px;
+    min-width: 259px;
+}
+ /* -------------FOOTER CONTACT WIDGET  <  ---------*/
+ .footer_coord {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 1fr 4r 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "tel num-tel"
+      "map map-address"
+      "email email-address";
+  }
+  
+  .tel { grid-area: tel; width: 50px; }
+  
+  .num-tel { grid-area: num-tel;}
+  
+  .map { grid-area: map; width: 50px; margin-top: 15px;}
+  
+  .map-address { grid-area: map-address; margin-top: 15px; margin-bottom: 15px; }
+  
+  .email { grid-area: email; width: 50px; }
+  
+  .email-address { grid-area: email-address; }
+  /* -------------  > FOOTER CONTACT WIDGET---------*/
+  
+
+  /* ---------social buton------- */
+  @media only screen and (max-width: 768px) {
+  .zoom-social-icons-list{
+      text-align: center;
+    }
+   .footer_widget_1{
+    flex-direction: row;
+    }
+   .footer_widget{
+    flex-wrap: wrap;
+    }
+
+} 
+
+@media only screen and (max-width: 360px) {
+    .zoom-social-icons-list{
+        text-align: center;
+      }
+     .footer_widget_1{
+      flex-direction: column;
+      }
+    .footer_widget{
+      flex-direction: column;
+      }
+  }
+  
+
+  /* -------------- OPEN HOURS WIDGET <  ------------ */
+  .open-hours {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "mon"
+      "tue"
+      "sat"
+      "hol";
+    }
+  .mon {
+      grid-area: mon;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }
+  .tue {
+      grid-area: tue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }  
+  .sat {
+      grid-area: sat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }  
+  .hol {
+      grid-area: hol;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 15px 0px;
+    }  
+  .topline1 { 
+        flex: 1;
+        border-top: 2px solid #F5F5F5;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+  .clock {
+     margin-right: 15px;
+     padding-top: 4px;
+    }
+  .hours {
+    text-align: right;
+    }
+
+  /* ----------   > OPEN HOURS WIDGET ------------*/

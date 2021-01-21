@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Top three services style */
 body{
     background-color: transparent;
@@ -13,6 +14,20 @@ body{
     padding-right: 2.5em;
     padding-bottom: 3em;
     
+=======
+/*  Top three services front page */
+
+.pTopThree{
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: -1em;
+    margin-bottom: 2.5em;  
+    font-size: 1em;
+}
+.tTopThree{
+    font-size: 1em;
+    padding-top: 3em;
+>>>>>>> Ingrid
 }
 
 .top-three {
@@ -20,7 +35,12 @@ body{
     flex-direction: row;
     margin-left: 3.8em;
     margin-right: 4.8em;
+<<<<<<< HEAD
     margin-top: -8em
+=======
+    margin-top: -8em;
+    z-index: 10;
+>>>>>>> Ingrid
 
 }
 .top-three-div{
@@ -30,12 +50,17 @@ body{
     border-top-right-radius: 40px;
     margin-left: 1em;
     margin-right: 1em;
+<<<<<<< HEAD
     box-shadow: 1px 5px 40px 1px rgb(94, 92, 92);
 
+=======
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
+>>>>>>> Ingrid
 }
 
 #quality{
     padding-top: 3em;
+<<<<<<< HEAD
 }
 #delivery{
     padding-top: 4em;
@@ -48,11 +73,87 @@ body{
 
 /* Three resto + description style */
 body {
+=======
+    margin-bottom: -3em;
+}
+#delivery{
+    padding-top: 4em;
+    margin-bottom: -3em;
+}
+#recipes{
+    padding-top: 3em;
+    margin-bottom: -3em;
+}
+
+
+/* Our Story The chef */
+p{
+    font-size: 0.8em;
+    padding-top: 1.5em;
+}
+
+
+.theChef{
+    display: flex;
+    flex-direction: row;
+    margin-top: 6em;
+    /* margin-bottom: 2em; */
+
+}
+.ourStory{
+    background-color:white;
+    margin-right: 10em;
+    margin-bottom: 1em;
+    margin-left: 31em;
+    margin-top: 8em;
+    position: absolute;
+    /* /* margin-bottom: 10em;
+    z-index: 1; */
+  
+    padding-left: 5em;
+    padding-top: 2em;
+    padding-right: 4em;
+    padding-bottom: 2em;
+    z-index: 12;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2); 
+}
+.discover{
+    font-size: 2em;
+    margin-top: 6em;
+}
+.ultimate{
+    font-size: 0.8;
+    font-weight: bold;
+}
+.story{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -1em;
+}
+.chef{
+    font-size: 2.5em;
+}
+
+.imageChef{
+    margin-left: 4.8em;
+    margin-left: 5em;
+    z-index: 11;
+    background-size: cover;
+    width: 572px;
+    height: 572px;
+    padding-bottom: 5em;
+}
+
+
+/* Three resto + description style */
+.containerOurResto {
+>>>>>>> Ingrid
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/burger-party1.png);
     background-repeat: repeat;
     font-family: Helvetica, Arial, sans-serif;
     color: 292929;
 }
+<<<<<<< HEAD
 p{
     font-size: 0.8em;
     padding-top: 2em;
@@ -60,16 +161,29 @@ p{
 H1{
 
 }
+=======
+
+>>>>>>> Ingrid
 h2{
     font-size: 2em;
 }
 h3{
+<<<<<<< HEAD
+=======
+    padding-top: 0.5em;
+>>>>>>> Ingrid
     font-size: 2em;
 }
 h4{
     font-size: 1.5em;
     padding-top: 1.6em;
 }
+<<<<<<< HEAD
+=======
+h6{
+    padding-top: 4em;
+}
+>>>>>>> Ingrid
 .title {
     text-align: center;
     padding-bottom: 3em;
