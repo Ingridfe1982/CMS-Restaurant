@@ -837,3 +837,47 @@ ul.menu_details li:first-child:before {
     transform: rotate(180deg);
     margin-top: -15px;
 }
+/* --------------> END OF RECIPES <------------------ */
+
+/* SINGLE RECIPES */
+
+.box_instructions {
+    width: 600px;
+    margin: auto;
+    margin-top: -250px;
+}
+
+.recipe_title, .post_info, .post_content {
+    color: white;
+    font-weight: bold;
+}
+
+.instr_title {
+    margin: 20px;
+}
+
+.instr_number {
+    width: 23px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.instructions {
+    color: grey;
+}
+
+.instr_order {
+    display: flex;
+}
+
+.imgInstruction {
+    width: 650px;
+    height: 250px;
+}
+
+
+
+/* --------------> END OF SINGLE RECIPES <------------------ */ 
