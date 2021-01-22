@@ -16,6 +16,8 @@ endif;
        	<?php the_content(); ?>
 	<?php endwhile; endif; ?>
 </section>
+
+<!-- --------------TESTIMONIAL--------------- -->
 <div class="hach_bottom_header_testi">
     <!-- background style hachage-->
 </div>
@@ -30,23 +32,6 @@ endif;
 <div class="hach_bottom_header">
     <!-- background style hachage-->
 </div>
-<?php get_footer(); ?>
+<!-- --------------END OF TESTIMONIAL--------------- -->
 
-<!-- *** Banner top  ***
-	* Subtitle + Main Title + Img + Intern Link
-	* 3 X Icon + Title + Text
-*** Intro ***
-	* Left : Image
-	* Right : Title + Subtitle + Text + Signature (Subtitle + title)
-*** 3 Restaurants ***
-	See the posts Restaurants.
-*** Our Menu ***
-	* 4 X Img
-	* Subtitle + Title + + Text + Intern Link
-*** Testimony ***
-	* Repeater :
-		- Image
-		- Text
-		- Name
-*** Recipes Blog ***
-	See Posts Recipes -->
+<?php get_footer(); ?>

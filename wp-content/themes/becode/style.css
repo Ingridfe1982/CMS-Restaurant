@@ -243,7 +243,7 @@ h2{
     background-color: #292929 ;
     color: #F5F5F5;
     padding-top: 240px;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
 footer{
     text-align: center;
@@ -611,7 +611,7 @@ footer{
     font-weight: 900;
     font-size: 20px;
     color: black;
-    width: 100px;
+    width: 120px;
     border-bottom: solid 1px black;
     padding-bottom: 10px;
 }
@@ -843,6 +843,7 @@ ul.menu_details li:first-child:before {
 }
 #discorver_food {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 .hach_bottom_home{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
@@ -1032,6 +1033,10 @@ a#cRetour{
     background-position: top;
     background-repeat: repeat-x;
     height: 73px;
-    /* transform: rotate(180deg); */
     margin-top: -35px;
+}
+
+#excerpt {
+    background-color: #F5F5F5;
+    height: 500px;
 }
