@@ -18,6 +18,22 @@ function register_my_menus() {
    }
    add_action( 'init', 'register_my_menus' );
 
+// widget recipes
+function recipes_widgets_init() {
+ 
+    register_sidebar( array(
+
+        'name' => 'Recipes',
+        'id' => 'recipes-widgets',
+        'before_widget' => '<div class="recipes_widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<div>',
+        'after_title' => '</div>',
+        ) );
+    }
+    // to have the option with the widgets in the dashboard of wp: add_action ...
+add_action( 'widgets_init', 'recipes_widgets_init' );
+
 // widget in the footer
 function footer_widgets_init() {
  
