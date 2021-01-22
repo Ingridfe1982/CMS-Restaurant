@@ -21,6 +21,7 @@ function register_my_menus() {
 // widget recipes
 function recipes_widgets_init() {
  
+<<<<<<< HEAD
     register_sidebar( array(
 
         'name' => 'Recipes',
@@ -34,6 +35,22 @@ function recipes_widgets_init() {
     // to have the option with the widgets in the dashboard of wp: add_action ...
 add_action( 'widgets_init', 'recipes_widgets_init' );
 
+=======
+	register_sidebar( array(
+   
+		'name' => 'Recipes',
+		'id' => 'recipes_widgets',
+		'before_widget' => '<div class="recipes_widgets>',
+		'after_widget' => '</div>',
+		'before_title' => '<div>',
+		'after_title' => '</div>',
+		) );
+	}
+	// to have the option with the widgets in the dashboard of wp: add_action ...
+add_action( 'widgets_init', 'recipes_widgets_init' );
+
+	
+>>>>>>> olivier
 // widget in the footer
 function footer_widgets_init() {
  
