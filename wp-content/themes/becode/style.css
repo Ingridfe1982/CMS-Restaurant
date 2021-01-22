@@ -96,6 +96,14 @@ h2{
     transform: rotate(180deg);
     margin-top: -35px;
 }
+.hach_bottom_header_testi{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 73px;
+    transform: rotate(0deg);
+    margin-bottom: -35px;
+}
 .hach_bottom_header_blog{
     background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-grises.png);
     background-position: top;
@@ -750,6 +758,9 @@ ul.menu_details li:first-child:before {
     text-decoration: none;
     background-color: black;
 }
+.read_more a {
+    text-decoration: none;
+}
 
 .recipe_ingre {
     list-style: circle;
@@ -881,3 +892,81 @@ ul.menu_details li:first-child:before {
 
 
 /* --------------> END OF SINGLE RECIPES <------------------ */ 
+
+
+
+/*------------ Btn UP ^ ^ ^ ^ ^ ^ ------*/
+/* pas certain d'arriver à l'activer. Oli */
+a#cRetour{
+    border-radius: 10%;
+    padding:5px;
+    font-size:20px;
+    text-align:center;
+    color:rgb(0, 0, 0);
+    background: #F5F5F5;
+    position:fixed;
+    right:20px;
+    opacity:1;
+    z-index:99999;
+    transition:all ease-in 0.2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+  }
+  a#cRetour:before{ content: "\25b2"; } 
+  /* \25b2 is the  Unicode number for triangle */
+  a#cRetour:hover{
+    background:rgba(0, 0, 0, 1);
+    transition:all ease-in 0.2s;
+  }
+  a#cRetour.cInvisible{
+    bottom:-35px;
+    opacity:0;
+    transition:all ease-in 0.5s;
+  }
+  
+  a#cRetour.cVisible{
+    bottom: 20px;
+    opacity:1;
+  }
+  /*------------ END - Btn UP ^ ^ ^ ^ ^ ^ ------*/
+  
+
+  /*------- TESTIMONIAL ------------*/
+.testimonial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 415px;
+}
+.testi_txt {
+    background-color: #292929 ;
+    color: white;
+    flex: 1;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    height: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sp-testimonial-free-section{
+    max-width: 350px;
+}
+.testi_img {
+    flex: 1;
+}
+.testi_img img {
+    max-width: 100%;
+}
+.hach_top_testi{
+    background-image: url(http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/hachures-blanches.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 73px;
+    /* transform: rotate(180deg); */
+    margin-top: -35px;
+}

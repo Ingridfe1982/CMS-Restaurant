@@ -33,5 +33,8 @@
 </div>
 </section>
         <?php wp_footer(); ?>
+        <!-- button up -->
+        <script src="http://localhost/CMS-Restaurant/script/upbutton.js"></script>
+
 </body>
 </html>

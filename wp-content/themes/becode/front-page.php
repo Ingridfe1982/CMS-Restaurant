@@ -16,6 +16,20 @@ endif;
        	<?php the_content(); ?>
 	<?php endwhile; endif; ?>
 </section>
+<div class="hach_bottom_header_testi">
+    <!-- background style hachage-->
+</div>
+<section class="testimonial">
+    <div class="testi_txt">
+	<?php echo do_shortcode('[sp_testimonial id="438"]'); ?>
+    </div>
+    <div class="testi_img">
+        <img src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/customers.png">
+    </div>
+</section>
+<div class="hach_bottom_header">
+    <!-- background style hachage-->
+</div>
 <?php get_footer(); ?>
 
 <!-- *** Banner top  ***
