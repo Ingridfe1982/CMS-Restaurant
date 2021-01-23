@@ -125,7 +125,12 @@
         </div>
     </div>
 </section>
-
+<div class="hach_bottom_header_testi">
+    <!-- background style hachage-->
+</div>
+<section id="excerpt">
+    
+</section>
 <?php while( have_posts() ) : the_post(); ?>
             <?php the_content(); ?> 
        
