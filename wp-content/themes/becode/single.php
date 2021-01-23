@@ -17,7 +17,7 @@ endif;
                 <div class="post_info">
                     <div class="flex-hour">
                         <a href="home.php" class="back"><img class="img_cat" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/left-arrow-1.svg">Retour</a>
-                        <?php the_time('d F Y'); ?>
+                        <div class="date"> <?php the_time('d F Y'); ?></div>
                     </div>
                     <div class="recipe_cat">
                             <img class="img_cat" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/cutelry-2.svg">
@@ -41,14 +41,15 @@ endif;
             <div>
     </div>
 
-                <div class="recipe_widget">
-                    <?php if ( is_active_sidebar( 'recipes-widgets' ) ) : ?>
-                        <div id="recipes_widget" class="recipe_widget" role="complementary"><?php dynamic_sidebar( 'recipes-widgets' ); ?></div>
-                    <?php endif; ?>
+                <div class="networks">
+                    <a href="https://facebook.com/" target="_blank"><img class="logo" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/facebook.svg"></a>
+                    <a href="https://twitter.com/" target="_blank"><img class="logo" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/twitter.svg"></a>
+                    <a href="https://www.instagram.com/dev.restaurant/" target="_blank"><img class="logo" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/instagram.svg"></a>
+                    <a href="mailto:devrestaurant@becode.org"><img class="logo" src="http://localhost/CMS-Restaurant/wp-content/uploads/2021/01/gmail.svg"></a>
                 </div>
 
                 <div class="bloc_ingr">
-                    <h4 class="instr_title">INGREDIENTS</h4>
+                    <h4 class="recipe_step">Ingredients</h4>
                     <div class="recipe_prep">
                         <?php echo get_field('preparation'); ?>
                     </div>
@@ -58,7 +59,7 @@ endif;
                 </div>    
             </div>
             
-            <h4 class="instr_title">INSTRUCTIONS</h4>
+            <h4 class="instr_title recipe_step">Instructions</h4>
 
             <?php if( have_rows( 'instructions' ) ):
                 $instruction_number = 1; ?>

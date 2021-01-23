@@ -9,6 +9,7 @@ Version: 1.0
 * {
     margin: 0;
     padding: 0;
+    font-family: Poppins;
   }
 html {
     scroll-behavior: smooth;
@@ -173,8 +174,7 @@ h2{
     width: 100%;
     justify-content: space-between;
     align-items: center;
-}
-  
+} 
 @media only screen and (max-width: 360px) {
     .header{
         max-width: 360px;
@@ -191,7 +191,6 @@ h2{
         max-height:100%;
     }
 }
-  
 .header_title_big{
     font-size: 80px;
     font-family: 'Poppins', sans-serif;
@@ -359,8 +358,7 @@ footer{
       "tel num-tel"
       "map map-address"
       "email email-address";
-  }
-  
+  } 
   .tel { grid-area: tel; width: 50px; }
   
   .num-tel { grid-area: num-tel;}
@@ -589,22 +587,18 @@ footer{
    /* ----------   > END OF FOOTER ------------*/
 
 /* MENU PAGE */
-
 .the_menu {
     margin: auto;
     width: 650px;
 }
-
 .menu_title, .menu_name {
     text-transform: uppercase;
 }
-
 .menu_welcome {
     width: 650px;
     text-align: center ;
     margin-bottom: 40px;
 }
-
 .menu_category {
     margin: auto;
     text-align: center;
@@ -615,17 +609,14 @@ footer{
     border-bottom: solid 1px black;
     padding-bottom: 10px;
 }
-
 .menu_category_details {
     margin-bottom: 50px;
 }
-
 ul.menu_details {
     padding: 0;
     overflow-x: hidden;
     list-style: none
 }
-
 ul.menu_details li:first-child:before {
     float: left;
     width: 0;
@@ -634,35 +625,28 @@ ul.menu_details li:first-child:before {
     ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
     ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
  }
-
  ul.menu_details span:first-child {
     padding-right: 0.5em;
     background: #F5F5F5;
- }
-    
+ }  
  ul.menu_details span:last-child {
     float: right;
     padding-left: 0.5em;
     background: #F5F5F5;
  }
-
 .menu_details {
     margin: 20px;
 }
-
 .menu_price {
     font-weight: bold;
     font-size: 18px;
 }
-
 .menu_description {
     color: grey;
 }
-
 .menu_selection {
     border: solid 4px #E1C303;
 }
-
 .selection_title {
     width: 150px;
     height: 20px;
@@ -673,7 +657,9 @@ ul.menu_details li:first-child:before {
     text-align: center;
     padding-top: 8px;
 }
-
+ul.menu_name li {
+    background-color: none;
+}
 /* END OF MENU PAGE */
 
 /* RECIPES */ 
@@ -691,12 +677,10 @@ ul.menu_details li:first-child:before {
     margin: 20px;
     font-size: 14px;
 }
-
 .cat_navigation {
     width: 900px;
     margin: auto;
 }
-
 .recipes {
     width: 900px;
     height: 300px;
@@ -705,20 +689,17 @@ ul.menu_details li:first-child:before {
     margin-top: 40px;
     margin-bottom: 20px;
 }
-
 .recipes:nth-child(even) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     
 }
-
 .recipes:nth-child(odd) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
-
 .recipes_details {
     display: flex;
     flex-direction: column;
@@ -726,18 +707,15 @@ ul.menu_details li:first-child:before {
     padding: 20px;
     text-align: center;
 }
-
 .post-categories {
     list-style: none;
     font-weight: bold;
 }
-
 .post_date {
     color: grey;
     font-size: 15px;
     text-decoration: none;
 }
-
 .recipes_img {
     background-color: grey;
     text-align: center;
@@ -745,7 +723,6 @@ ul.menu_details li:first-child:before {
     margin: 0;
     padding: 0;
 }
-
 .read_more {
     background-color: #292929;
     color: white;
@@ -765,21 +742,17 @@ ul.menu_details li:first-child:before {
 .read_more a {
     text-decoration: none;
 }
-
 .recipe_ingre {
     list-style: circle;
 }
-
 .recipe_cat {
     display: flex;
     justify-content: center;
 }
-
 .img_cat {
     width: 13px;
     margin-right: 8px;
 }
-
 .pagination {
     width: 200px;
     margin: auto;
@@ -787,22 +760,18 @@ ul.menu_details li:first-child:before {
     justify-content: space-between;
     margin-top: 30px;
 }
-
 .page-numbers {
     padding: 10px 15px 10px 15px;
     background-color: white;
     border: solid 1px #dadada;
     border-radius: 5px;
 }
-
 .page-numbers:hover {
     text-decoration: none;
 }
-
 .current {
     background-color: #F5F5F5;
 }
-
 /* END OF RECIPES */
 
 /* ---------- Discover food ------------------ */ 
@@ -856,7 +825,6 @@ ul.menu_details li:first-child:before {
 /* --------------> END OF RECIPES <------------------ */
 
 /* SINGLE RECIPES */
-
 .box_instructions {
     width: 600px;
     margin: auto;
@@ -864,36 +832,33 @@ ul.menu_details li:first-child:before {
     z-index: 5;
     position: relative;
 }
-
 .recipe_title, .post_info, .post_content {
     color: white;
     font-weight: bold;
 }
-
 .recipe_title {
     line-height: 1em;
     margin-bottom: 40px;
 }
-
 .post_content {
     margin-bottom: 40px;
 }
-
 .post_info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
-
 .instr_title {
-    margin: 20px 20px 20px 0;
+    margin: 20px 20px 20px 100px;
 }
-
+.recipe_step {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
 .instru-flex {
     display: flex;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 20px 100px;
 }
-
 .instr_number {
     display: flex;
     align-items: center;
@@ -907,59 +872,73 @@ ul.menu_details li:first-child:before {
     font-weight: bold;
     margin-left: -40px;
 }
-
 .instructions {
     color: grey;
     margin-left: 18px;
 }
-
 .instr_order {
     display: flex;
 }
-
 .imgInstruction {
-    width: 600px;
-    height: 250px;
+    width: 450px;
+    height: 200px;
+    margin-left: 100px;
 }
-
 .attachment-post {
     z-index: 10;
 }
-
 .recipe_img {
     z-index: 5;
     position: relative;
     width: 100%;
 }
-
 .recipe_img img {
     width: 100%;
     height: 300px;
 }
-
 .ingredients li {
     padding-left: 30px;
 }
-
 .recipe_prep {
     margin-bottom: 20px;
 }
-
 .ingredients ul {
     margin-left: 18px;
 }
-
 .head_bloc {
     margin-top: -150px;
 }
-
 .ingr-flex {
     display: flex;
 }
+.flex-hour {
+    display: flex;
+    height: 20px;
+}
+.back {
+    border-right: solid 1px grey;
+    padding-right: 20px; 
+}
+.date {
+    border-left: solid 0,5px grey;
+    padding-left: 20px;
+}
+.networks {
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-right: 60px;
+}
+.logo {
+    width: 35px;
+}
+.bloc_ingr {
+    margin-top: 30px;
+}
 
 /* --------------> END OF SINGLE RECIPES <------------------ */ 
-
-
 
 /*------------ Btn UP ^ ^ ^ ^ ^ ^ ------*/
 /* pas certain d'arriver à l'activer. Oli */
