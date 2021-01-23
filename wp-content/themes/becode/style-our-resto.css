@@ -64,7 +64,7 @@ p{
     margin-right: 10em;
     margin-bottom: 1em;
     margin-left: 31em;
-    margin-top: 8em;
+    margin-top: 7em;
     position: absolute;
     /* /* margin-bottom: 10em;
     z-index: 1; */
@@ -93,7 +93,7 @@ p{
     font-size: 2.5em;
 }
 
-.imageChef{
+#imageChef{
     margin-left: 4.8em;
     margin-left: 5em;
     z-index: 11;
@@ -175,7 +175,7 @@ h6{
     z-index: 2;
     width: 40%;
     /* margin-right: -10em; */
-    margin-top: 3em;
+    margin-top: 3.5em;
     margin-bottom: 6em;
     margin-left: 5.3em;
     padding-bottom: 2em;
@@ -220,42 +220,75 @@ h6{
     height: 572px
 }
 .buttonMore {
-    background-color: #323232;
+    background-color: #292929;
     color: white;
-    font-weight: bolder;
-    border: none;
-    margin-top: 2.8em;
+    width: 100px;
+    font-weight: bold;
+    padding: 10px 1px 10px 1px;
+    margin-top: 3em;
     margin-bottom: 2em;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border-style: none;
 }
 
 /* Page resto1 */
+.sloganResto1{
+    padding-top: 3em;
+    font-size: 2.2em;
+
+}
+.nameResto1{
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 10em;
+}
 .containerResto{
     background-color: f5f5f5;
 }
 .resto1Description{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-right: 5em;
 }
 .resto1Text{
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    padding-left: 1em;
     text-align: center;
+    /* margin-left: 5em; */
+    padding-top: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 4px;
+}
+.resto1PlateText{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-top: 4em;;
+    text-align: center;
+    margin-left: 5em;
+    margin-right: -5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 4px;
 }
 
 #resto1DescImg{
     background-size: contain;
-    width: 572px;
-    height: 572px
+    width: 530px;
+    height: 530px;
+    margin-left: 5em;
 }
 #resto1PlateImg{
     background-size: contain;
-    width: 572px;
-    height: 572px
+    width: 530px;
+    height: 530px;
+    margin-right: 5em;
+}
+.descriptionResto1Paragraphe{
+    line-height: 4em;
+
 }
 /* Google Maps Location */
 #locationResto1{
