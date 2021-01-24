@@ -627,12 +627,12 @@ ul.menu_details li:first-child:before {
  }
  ul.menu_details span:first-child {
     padding-right: 0.5em;
-    background: #F5F5F5;
+    background: white;
  }  
  ul.menu_details span:last-child {
     float: right;
     padding-left: 0.5em;
-    background: #F5F5F5;
+    background: white;
  }
 .menu_details {
     margin: 20px;
@@ -657,8 +657,8 @@ ul.menu_details li:first-child:before {
     text-align: center;
     padding-top: 8px;
 }
-ul.menu_name li {
-    background-color: none;
+.menu_name {
+    background-color: white;
 }
 /* END OF MENU PAGE */
 
@@ -1015,7 +1015,70 @@ a#cRetour{
     margin-top: -35px;
 }
 
+/* ------- LATEST UPDATED RECIPES ------- */
+
 #excerpt {
     background-color: #F5F5F5;
-    height: 500px;
+    height: 950px;
 }
+#excerpt_white {
+    background-color: white;
+    height: 750px;
+}
+.section_title {
+    z-index: 5;
+    position: relative;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+.update_title {
+    font-weight: normal;
+    line-height: 20%;
+}
+.section_title h4 {
+    padding-top: 0.6em;
+}
+.horizontal_dotted_line{
+    width: 220px;
+    display : flex;
+    margin: 9px 10px;
+   } 
+.dot{
+    flex: 1;
+    border-bottom: 1px dotted black;
+    height: 0.6em;
+}
+.card_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+}
+.latest_card {
+    flex: 1;
+    margin: 0 15px 0 15px;
+    background-color: white;
+}
+.card-img-top {
+    width: 100%;
+    height: 250px;
+}
+.readMore {
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 8px;
+    text-transform: uppercase;
+}
+.card_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.card_text {
+    padding: 10px;
+}
+
+/* ------- END OF LATEST UPDATED RECIPES ------- */

@@ -6,6 +6,7 @@ add_theme_support( 'title-tag' );
 // Définir une autre taille d'images 
 add_image_size( 'recipes', 400, 300, false );
 add_image_size( 'post', 650, 250, false );
+add_image_size( 'card', 200, 200, false);
 
 function register_my_menus() {
 	register_nav_menus(
