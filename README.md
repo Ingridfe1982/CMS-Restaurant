@@ -25,19 +25,19 @@
   <li>ACF Columns</li>
   <li>Advanced Custom Fields PRO	</li>
   <li>Advanced Custom Fields: Image Crop Add-on</li>
-  <li>SVG Support</li>
+  <li>SVG Support (to accept to upload SVG)</li>
 </ul>
 <ul>
-  <li>Dynamic To Top</li>
-  <li>Smash Balloon Instagram Feed</li>
-  <li>MC4WP: Mailchimp for WordPress</li>
-  <li>Social Icons Widget & Block by WPZOOM</li>
-  <li>LoginPress - Customizing the WordPress Login</li>
-  <li>Testimonial</li>
+  <li>Dynamic To Top (the 'up' button)</li>
+  <li>Smash Balloon Instagram Feed (connection with a real Instagram user and visible in a widget footer and in the 'DISCOVER OUR MENU' area)</li>
+  <li>MC4WP: Mailchimp for WordPress (connection with a real Newsletter's user on Mailchimp)</li>
+  <li>Social Icons Widget & Block by WPZOOM (easy social icons in a widget for the footer)</li>
+  <li>LoginPress (customizing the WordPress Login)</li>
+  <li>Testimonial (with slider)</li>
 </ul>
 <ul>
-  <li>All-in-One WP Migration	</li>
-  <li>All-in-One WP Migration File Extension</li>
-  <li>Better Search Replace</li>
-  <li>UpdraftPlus - Backup/Restore</li>
+  <li>All-in-One WP Migration	(migration of all the datas)</li>
+  <li>All-in-One WP Migration File Extension (to accept big files)</li>
+  <li>Better Search Replace (to remplace the 'localhost' url in the database)</li>
+  <li>UpdraftPlus - Backup/Restore (better to have a backup)</li>
 </ul>
