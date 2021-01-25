@@ -18,3 +18,4 @@
   
 <h3>Deployment</h3>
 <p>You can find us on: https://begoodi.be/CMS-Restaurant/ </p>
+<p>Possible connection with the login 'Le Chef' and the password 'becode'.</p>
