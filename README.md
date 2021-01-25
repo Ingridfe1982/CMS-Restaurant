@@ -19,3 +19,25 @@
 <h3>Deployment</h3>
 <p>You can find us on: https://begoodi.be/CMS-Restaurant/ </p>
 <p>Possible connection with the login 'Le Chef' and the password 'becode'.</p>
+
+<h3>Plugins</h3>
+<ul>
+  <li>ACF Columns</li>
+  <li>Advanced Custom Fields PRO	</li>
+  <li>Advanced Custom Fields: Image Crop Add-on</li>
+  <li>SVG Support</li>
+</ul>
+<ul>
+  <li>Dynamic To Top</li>
+  <li>Smash Balloon Instagram Feed</li>
+  <li>MC4WP: Mailchimp for WordPress</li>
+  <li>Social Icons Widget & Block by WPZOOM</li>
+  <li>LoginPress - Customizing the WordPress Login</li>
+  <li>Testimonial</li>
+</ul>
+<ul>
+  <li>All-in-One WP Migration	</li>
+  <li>All-in-One WP Migration File Extension</li>
+  <li>Better Search Replace</li>
+  <li>UpdraftPlus - Backup/Restore</li>
+</ul>
