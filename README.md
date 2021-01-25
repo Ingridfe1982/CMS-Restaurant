@@ -3,8 +3,8 @@
 <p>This project is a Wordpress exercise, as part of our BeCode training. We had to create a CMS for a Chef, who would like to edit the content of his website regularly. </p>
 <p>You can see the project's <a href="https://github.com/becodeorg/LIE-Hamilton-4.25/tree/master/01-main-course/03-the-mountain/02-cms-restaurant">READ ME</a> on BeCode's repository, as well as the design we had to follow.</p>
 
-<h3>Deadline<h/3>
-  <p>We had to conclude this project for 25/01/2021.</p>
+<h3>Deadline</h3>
+<p>We had to conclude this project for 25/01/2021.</p>
 
 <h3>Team</h3>
 <ul>
